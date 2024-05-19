@@ -2,6 +2,8 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractBaseUser
 
+from .managers import MyUserManager
+
 
 class MyUser(AbstractBaseUser):
     phone_number =  models.CharField(verbose_name=_('phone number'), max_length=11, unique=True)
@@ -9,7 +11,7 @@ class MyUser(AbstractBaseUser):
     is_active = models.BooleanField(default=True)
     is_admin =models.BooleanField(default=False)
 
-
+    objects = MyUserManager()
 
     USERNAME_FIELD ='phone_number'
     REQUIRED_FIELDS =['full_name']
