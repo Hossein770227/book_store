@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+from django.contrib.messages import constants
 from environs import Env
 from pathlib import Path
 
@@ -140,3 +141,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # account config 
 AUTH_USER_MODEL = 'accounts.MyUser'
+
+# messages config
+MESSAGE_TAGS={
+    constants.ERROR:"danger",
+}

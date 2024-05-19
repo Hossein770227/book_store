@@ -57,6 +57,9 @@ class UserRegisterCodeView(View):
             cd = form.cleaned_data
             now = datetime.now(tz=pytz.timezone('Asia/Tehran'))
             expired_time = code_instance.date_time_created + timedelta (minutes=2)
+            if OtpCode:
+                if now > expired_time:
+                    code_instance.delete()          
             if now > expired_time:
                 code_instance.delete()
                 messages.error(request, _('your code time is out'))
