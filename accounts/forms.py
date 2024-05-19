@@ -13,6 +13,7 @@ class UserCreationForm(forms.ModelForm):
     class Meta:
         model = MyUser
         fields = ['phone_number', 'full_name']
+
     def clean_password2(self):
         cd = self.cleaned_data
         if cd ['password1'] and cd['password2'] and cd['password1'] != cd['password2']:
@@ -34,20 +35,27 @@ class UserChangeForm(forms.ModelForm):
         fields = ['phone_number', 'full_name', 'password', 'last_login']
 
 
-# class UserRegisterForm(forms.Form):
-#     phone = forms.CharField(label=_('phone number'),max_length=11, required=True)
-#     username= forms.CharField(label=_('user name'),max_length=100, required=True)
-#     password1 = forms.CharField(label=_('password'),widget=forms.PasswordInput)
-#     password2 = forms.CharField(label=_('confirm password'),widget=forms.PasswordInput)
+class UserRegisterForm(forms.Form):
+    phone = forms.CharField(label=_('phone number'),max_length=11, required=True)
+    username= forms.CharField(label=_('user name'),max_length=100, required=True)
+    password1 = forms.CharField(label=_('password'),widget=forms.PasswordInput)
+    password2 = forms.CharField(label=_('confirm password'),widget=forms.PasswordInput)
 
 
-#     def clean_phone(self):
-#         phone = self.cleaned_data['phone']
-#         user = MyUser.objects.filter(phone_number=phone).exists()
-#         if user:
-#             raise ValidationError('This phone number already exists')
-#         return phone
+    def clean_phone(self):
+        phone = self.cleaned_data['phone']
+        user = MyUser.objects.filter(phone_number=phone).exists()
+        if user:
+            raise ValidationError(_('This phone number already exists'))
+        return phone
     
+    def clean_password2(self):
+        cd = self.cleaned_data
+        if cd ['password1'] and cd['password2'] and cd['password1'] != cd['password2']:
+            raise ValidationError(_("passwords dont match"))
+        return cd['password2']
 
 
+class VerifyCodeForm(forms.Form):
+    code =forms.IntegerField()
 
