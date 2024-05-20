@@ -32,7 +32,16 @@
                 <a class="nav-link" href="#">اضافه کردن کتاب</a>
             </div>
         </div>
-        <div class="mx-2 text-white">خوش آمدی محمدهادی | <a class="link-light text-decoration-none" href="#">خروج</a></div>
+        {% if user.is_authenticated %}
+        <form action="{% url 'accounts:logout' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class='btn'>Log Out</button>
+        </form>
+            <p class="mx-2 text-white">welcome {{user.full_name}}
+            </p>
+        {% else %}
+        <div class="mx-2 text-white"> <a class="link-light text-decoration-none" href="{% url "accounts:login" %}">login</a> | <a class="link-light text-decoration-none" href="{% url "accounts:user_register" %}">signup</a></div>
+        {% endif %}
     </div>
 </nav>
 
@@ -41,7 +50,7 @@
 {% endblock content %}
 <footer class="bg-light text-center text-lg-start mt-5">
   <div class="text-center bg-grey">
-      <p>دوره آموزشی جنگو <a class="text-dark" href="https://codingyar.com/" target="_blank">کدینگ یار</a></p>
+      <p> ساخت وب سایت با استفاده از  <a class="text-dark" href="https://codingyar.com/" target="_blank">جنگو </a></p>
   </div>
 </footer>
 

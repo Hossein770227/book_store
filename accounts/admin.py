@@ -2,6 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
+from jalali_date.admin import ModelAdminJalaliMixin
+
 
 
 from .forms import UserCreationForm, UserChangeForm
@@ -39,5 +41,5 @@ admin.site.register(MyUser, UserAdmin)
 admin.site.unregister(Group)
 
 @admin.register(OtpCode)
-class OtpCodeAdmin(admin.ModelAdmin):
-    list_display= ['phone_number', 'code', 'date_time_created']
+class OtpCodeAdmin(ModelAdminJalaliMixin,admin.ModelAdmin):
+    list_display = ['phone_number', 'code', 'date_time_created']
