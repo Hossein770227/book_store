@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 15:56+0330\n"
-"PO-Revision-Date: 2024-05-20 16:10+0330\n"
+"POT-Creation-Date: 2024-05-20 20:37+0330\n"
+"PO-Revision-Date: 2024-05-20 20:39+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -18,6 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\apps.py:7
+msgid "accounts"
+msgstr "اکانت"
 
 #: .\forms.py:39 .\models.py:10
 msgid "phone number"
@@ -42,6 +46,14 @@ msgstr "شماره تلفن از قبل وجود دارد"
 #: .\forms.py:55
 msgid "passwords dont match"
 msgstr "گذرواژه مطابقت ندارد"
+
+#: .\models.py:16 .\models.py:17
+msgid "my users"
+msgstr "مخاطبین"
+
+#: .\models.py:49 .\models.py:50
+msgid "otp code"
+msgstr "کد تایید"
 
 #: .\views.py:30
 msgid "we send your code alreedy"

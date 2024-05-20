@@ -10,6 +10,10 @@ class Book(models.Model):
     date_time_created = models.DateTimeField(_("date time created"), auto_now_add=True)
     date_time_modified = models.DateTimeField(_("date time modified"), auto_now=True)
 
+    class Meta:
+        verbose_name = _('books')
+        verbose_name_plural = _('books')
+
     def __str__(self):
         return self.title
 

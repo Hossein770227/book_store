@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 16:47+0330\n"
-"PO-Revision-Date: 2024-05-20 16:49+0330\n"
+"POT-Creation-Date: 2024-05-20 20:27+0330\n"
+"PO-Revision-Date: 2024-05-20 20:28+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -50,3 +50,7 @@ msgstr "تاریخ ایجاد"
 #: .\models.py:11
 msgid "date time modified"
 msgstr "تاریخ تغییر"
+
+#: .\models.py:14 .\models.py:15
+msgid "books"
+msgstr "کتاب ها"
