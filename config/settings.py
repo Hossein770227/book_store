@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     # my app
     "pages",
     'accounts',
+
+    # third apps
+    'rosetta',
 ]
 
 MIDDLEWARE = [
@@ -150,3 +153,12 @@ AUTH_USER_MODEL = 'accounts.MyUser'
 MESSAGE_TAGS={
     constants.ERROR:"danger",
 }
+
+LOCALE_PATHS = [
+os.path.join(BASE_DIR, 'templates/locale'),
+]
+
+LANGUAGES =(
+    ('en', 'English'),
+    ('fa', 'persion'),
+)
