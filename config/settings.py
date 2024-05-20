@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # my app
     "pages",
     'accounts',
+    'books',
 
     # third apps
     'rosetta',
