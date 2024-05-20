@@ -6,6 +6,7 @@ class Book(models.Model):
     description = models.TextField(_("description"))
     author = models.CharField(_("author"),max_length=100)
     price = models.PositiveIntegerField(_("price"))
+    active = models.BooleanField(_("active"), default=True)
     date_time_created = models.DateTimeField(_("date time created"), auto_now_add=True)
     date_time_modified = models.DateTimeField(_("date time modified"), auto_now=True)
 
