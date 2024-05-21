@@ -6,6 +6,7 @@ class Book(models.Model):
     title =models.CharField(_("title"), max_length=100)
     description = models.TextField(_("description"))
     author = models.CharField(_("author"),max_length=100)
+    image = models.ImageField(_("image"), upload_to='cover/',blank=True )
     price = models.PositiveIntegerField(_("price"))
     active = models.BooleanField(_("active"), default=True)
     date_time_created = models.DateTimeField(_("date time created"), auto_now_add=True)
