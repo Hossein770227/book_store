@@ -96,7 +96,7 @@ def logout_view(request):
     if request.method =='POST':
         logout(request)
         messages.error(request, _('you successfully logouted'))
-        return redirect('pages:home')
+        return redirect('books:book_list')
 
 # password change
 
