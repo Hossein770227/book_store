@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Book
+from .models import Book, Comment
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
@@ -8,3 +8,8 @@ class BookAdmin(admin.ModelAdmin):
     search_fields =['title']
     list_filter =['active']
     list_per_page = 10
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display=['author', 'email', 'date_time_created']

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-20 20:27+0330\n"
-"PO-Revision-Date: 2024-05-20 20:28+0330\n"
+"POT-Creation-Date: 2024-05-21 20:58+0330\n"
+"PO-Revision-Date: 2024-05-21 20:59+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,34 +23,55 @@ msgstr ""
 msgid "books sote"
 msgstr "کتاب فروشی"
 
-#: .\models.py:5
+#: .\models.py:7
 msgid "title"
 msgstr "نام"
 
-#: .\models.py:6
+#: .\models.py:8
 msgid "description"
 msgstr "توضیحات"
 
-#: .\models.py:7
+#: .\models.py:9 .\templates\books\book_detail.html:20
+#: .\templates\books\book_list.html:26
 msgid "author"
 msgstr "نوبسنده"
 
-#: .\models.py:8
+#: .\models.py:10
+msgid "image"
+msgstr "تصویر"
+
+#: .\models.py:11
 msgid "price"
 msgstr "قیمت"
 
-#: .\models.py:9
+#: .\models.py:12 .\models.py:31
 msgid "active"
 msgstr "فعال"
 
-#: .\models.py:10
+#: .\models.py:13 .\models.py:32
 msgid "date time created"
 msgstr "تاریخ ایجاد"
 
-#: .\models.py:11
+#: .\models.py:14 .\models.py:33
 msgid "date time modified"
 msgstr "تاریخ تغییر"
 
-#: .\models.py:14 .\models.py:15
+#: .\models.py:17 .\models.py:18
 msgid "books"
 msgstr "کتاب ها"
+
+#: .\models.py:29
+msgid "email"
+msgstr "ایمیل"
+
+#: .\models.py:30
+msgid "text comment"
+msgstr "متن نظر"
+
+#: .\models.py:36 .\models.py:37
+msgid "comments"
+msgstr "کامنت ها"
+
+#: .\templates\books\book_detail.html:24
+msgid "$"
+msgstr "تومان"

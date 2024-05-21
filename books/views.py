@@ -1,7 +1,7 @@
 from django.shortcuts import render , get_object_or_404
 from django.views.generic import ListView, DetailView
 
-from .models import Book
+from .models import Book, Comment
 
 class BookListView(ListView):
     model =Book
@@ -16,4 +16,5 @@ class BookListView(ListView):
 
 def book_detail_view(request, pk):
     book = get_object_or_404(Book,pk=pk )
-    return render(request,'books/book_detail.html',{'book':book} )
+    comment =Comment.objects.filter(active=True)
+    return render(request,'books/book_detail.html',{'book':book,"comments":comment} )
