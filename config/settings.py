@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     "pages",
     'accounts',
     'books',
-    'translate_number',
+    'persion_number',
+
 
     # third apps
     'rosetta',
