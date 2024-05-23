@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-23 14:14+0330\n"
-"PO-Revision-Date: 2024-05-23 14:14+0330\n"
+"POT-Creation-Date: 2024-05-23 22:37+0330\n"
+"PO-Revision-Date: 2024-05-23 22:39+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -23,72 +23,75 @@ msgstr ""
 msgid "books sote"
 msgstr "کتاب فروشی"
 
-#: .\models.py:7
+#: .\forms.py:11
+#| msgid "wirte your comment"
+msgid "write your comment"
+msgstr "نظر خود را در این قسمت بنویسید"
+
+#: .\models.py:8
 msgid "title"
 msgstr "نام"
 
-#: .\models.py:8
-msgid "description"
-msgstr "توضیحات"
-
-#: .\models.py:9 .\templates\books\book_detail.html:21
+#: .\models.py:10 .\templates\books\book_detail.html:23
 #: .\templates\books\book_list.html:26
 msgid "author"
-msgstr "نوبسنده"
+msgstr "نویسنده"
 
-#: .\models.py:10
+#: .\models.py:11
 msgid "image"
 msgstr "تصویر"
 
-#: .\models.py:11
+#: .\models.py:12
 msgid "price"
 msgstr "قیمت"
 
-#: .\models.py:12 .\models.py:31
+#: .\models.py:13 .\models.py:32
 msgid "active"
 msgstr "فعال"
 
-#: .\models.py:13 .\models.py:32
+#: .\models.py:14 .\models.py:33
 msgid "date time created"
 msgstr "تاریخ ایجاد"
 
-#: .\models.py:14 .\models.py:33
+#: .\models.py:15 .\models.py:34
 msgid "date time modified"
 msgstr "تاریخ تغییر"
 
-#: .\models.py:17 .\models.py:18
+#: .\models.py:18 .\models.py:19
 msgid "books"
 msgstr "کتاب ها"
 
-#: .\models.py:29
+#: .\models.py:30
 msgid "email"
 msgstr "ایمیل"
 
-#: .\models.py:30
+#: .\models.py:31
 msgid "text comment"
 msgstr "متن نظر"
 
-#: .\models.py:36 .\models.py:37 .\templates\books\book_detail.html:39
+#: .\models.py:37 .\models.py:38 .\templates\books\book_detail.html:41
 msgid "comments"
 msgstr "کامنت ها"
 
-#: .\templates\books\book_detail.html:25
+#: .\templates\books\book_detail.html:27
 msgid "$"
 msgstr "تومان"
 
-#: .\templates\books\book_detail.html:52
-#| msgid "text comment"
+#: .\templates\books\book_detail.html:54
 msgid "wirte your comment"
 msgstr "نظر خود را بنویسید"
 
-#: .\templates\books\book_detail.html:56
+#: .\templates\books\book_detail.html:58
 msgid "submit"
 msgstr "ثبت"
 
-#: .\templates\books\book_detail.html:59
+#: .\templates\books\book_detail.html:61
 msgid "to write comment please"
 msgstr "برای نوشتن کامنت خود"
 
-#: .\templates\books\book_detail.html:59
+#: .\templates\books\book_detail.html:61
 msgid "login"
 msgstr "ورود انجام دهید"
+
+#~ msgid "description"
+#~ msgstr "توضیحات"
