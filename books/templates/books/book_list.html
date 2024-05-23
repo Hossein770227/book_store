@@ -22,7 +22,7 @@
                                             
                                             <h3 class="card-title"><strong>{{book.title}}</strong></h3>
                                         </a>
-                                        <p class="card-text pt-3">{{book.description|linebreaksbr|truncatewords:30}}</p>
+                                        <p class="card-text pt-3">{{book.description|safe|linebreaksbr|truncatewords:30}}</p>
                                         <p class="text-muted">{% trans "author" %}:{{book.author}}</p>
                                     </div>
                                 </div>
