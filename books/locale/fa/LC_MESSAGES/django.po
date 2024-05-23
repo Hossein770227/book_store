@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 20:58+0330\n"
-"PO-Revision-Date: 2024-05-21 20:59+0330\n"
+"POT-Creation-Date: 2024-05-23 14:14+0330\n"
+"PO-Revision-Date: 2024-05-23 14:14+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -31,7 +31,7 @@ msgstr "نام"
 msgid "description"
 msgstr "توضیحات"
 
-#: .\models.py:9 .\templates\books\book_detail.html:20
+#: .\models.py:9 .\templates\books\book_detail.html:21
 #: .\templates\books\book_list.html:26
 msgid "author"
 msgstr "نوبسنده"
@@ -68,10 +68,27 @@ msgstr "ایمیل"
 msgid "text comment"
 msgstr "متن نظر"
 
-#: .\models.py:36 .\models.py:37
+#: .\models.py:36 .\models.py:37 .\templates\books\book_detail.html:39
 msgid "comments"
 msgstr "کامنت ها"
 
-#: .\templates\books\book_detail.html:24
+#: .\templates\books\book_detail.html:25
 msgid "$"
 msgstr "تومان"
+
+#: .\templates\books\book_detail.html:52
+#| msgid "text comment"
+msgid "wirte your comment"
+msgstr "نظر خود را بنویسید"
+
+#: .\templates\books\book_detail.html:56
+msgid "submit"
+msgstr "ثبت"
+
+#: .\templates\books\book_detail.html:59
+msgid "to write comment please"
+msgstr "برای نوشتن کامنت خود"
+
+#: .\templates\books\book_detail.html:59
+msgid "login"
+msgstr "ورود انجام دهید"
