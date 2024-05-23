@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-21 19:58+0330\n"
-"PO-Revision-Date: 2024-05-21 20:00+0330\n"
+"POT-Creation-Date: 2024-05-23 14:21+0330\n"
+"PO-Revision-Date: 2024-05-23 14:22+0330\n"
 "Last-Translator: Anonymous User <anonymous@user.tld>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,16 +19,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: .\registration\login.html:13 .\registration\login.html:20
+#: .\_base.html:31
+msgid "home page"
+msgstr "صفحه اصلی "
+
+#: .\_base.html:37
+msgid "log out"
+msgstr "خروج"
+
+#: .\_base.html:39
+msgid "welcome"
+msgstr "خوش آمدید"
+
+#: .\_base.html:42 .\registration\login.html:14 .\registration\login.html:21
 #: .\registration\user_register.html:26 .\registration\verify_code.html:26
 msgid "login"
 msgstr "ورود"
 
-#: .\registration\login.html:26 .\registration\user_register.html:13
+#: .\_base.html:42
+#| msgid "sign up"
+msgid "signup"
+msgstr "ثبت نام"
+
+#: .\_base.html:52
+msgid "writh websit with "
+msgstr "برنامه نویس وب سایت با "
+
+#: .\_base.html:52
+msgid "django"
+msgstr "جنگو"
+
+#: .\registration\login.html:27 .\registration\password_change.html:13
+#: .\registration\password_change.html:26 .\registration\user_register.html:13
 #: .\registration\user_register.html:20 .\registration\verify_code.html:13
 msgid "sign up"
 msgstr "ثبت نام"
 
-#: .\registration\verify_code.html:20
+#: .\registration\password_change.html:20 .\registration\verify_code.html:20
 msgid "submit"
 msgstr "ثبت"

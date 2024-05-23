@@ -1,5 +1,6 @@
 <!doctype html>
 {% load static %}
+{% load i18n %}
 <html lang="en">
 <head>
     <!-- Required meta tags -->
@@ -18,29 +19,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-info" dir="rtl">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="icons/book.png" alt="" height="30"
+            <img src="{% static "icons/book.png" %}" alt="" height="30"
                  class="d-inline-block align-text-top">
         </a>
-        <a class="navbar-brand mx-3" href="#">کتاب یار</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{% url "books:book_list" %}">خانه</a>
-                <a class="nav-link" href="#">اضافه کردن کتاب</a>
+                <a class="nav-link active" aria-current="page" href="{% url "books:book_list" %}">{% trans "home page" %}</a>
             </div>
         </div>
         {% if user.is_authenticated %}
         <form action="{% url 'accounts:logout' %}" method="POST">
             {% csrf_token %}
-            <button type="submit" class='btn'>Log Out</button>
+            <button type="submit" class='btn'>{% trans "log out" %}</button>
         </form>
-            <p class="mx-2 text-white">welcome {{user.full_name}}
+            <p class="mx-2 text-white">{% trans "welcome" %} {{user.full_name}}
             </p>
         {% else %}
-        <div class="mx-2 text-white"> <a class="link-light text-decoration-none" href="{% url "accounts:login" %}">login</a> | <a class="link-light text-decoration-none" href="{% url "accounts:user_register" %}">signup</a></div>
+        <div class="mx-2 text-white"> <a class="link-light text-decoration-none" href="{% url "accounts:login" %}">{% trans "login" %}</a> | <a class="link-light text-decoration-none" href="{% url "accounts:user_register" %}">{% trans "signup" %}</a></div>
         {% endif %}
     </div>
 </nav>
@@ -50,7 +49,7 @@
 {% endblock content %}
 <footer class="bg-light text-center text-lg-start mt-5">
   <div class="text-center bg-grey">
-      <p> ساخت وب سایت با استفاده از  <a class="text-dark" href="https://codingyar.com/" target="_blank">جنگو </a></p>
+      <p>{% trans "writh websit with " %} <a class="text-dark" href="https://codingyar.com/" target="_blank">{% trans "django" %} </a></p>
   </div>
 </footer>
 
