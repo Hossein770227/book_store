@@ -1,6 +1,8 @@
 {% extends "_base.html" %}
 {% load crispy_forms_tags %}
 {% load i18n %}
+{% load humanize %}
+{% load persion_number %}
 
 {% block page_title %}book detail{% endblock page_title %}
 
@@ -22,7 +24,7 @@
                         </div>
                         <div class="col-xs-12 col-md-3 d-flex flex-column">
                             <h3 class="align-self-center pt-2 text-muted align-self-md-end">
-                                {{book.price}} {% trans "$" %}
+                                {{book.price|english_number_to_persion|intcomma:False}} {% trans "$" %}
                             </h3>
                         </div>
                     </div>
