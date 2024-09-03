@@ -12,10 +12,6 @@ class BookListView(ListView):
     ordering = ['-date_time_created']
 
 
-# class BookDetailView(DetailView):
-#     model =Book
-#     template_name = 'books/book_detail.html'
-#     context_object_name = 'book'
 
 def book_detail_view(request, pk):
     book = get_object_or_404(Book,pk=pk )
